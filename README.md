@@ -26,7 +26,7 @@
 |------|----|-------|
 |id|int|null: false|
 |name|text|null: false| 
-|users_id|integer|null: false, foreign_key:true|
+|user_id|integer|null: false, foreign_key:true|
 |comment_id|integer|foreign_key:true|
 ### Association
 - has_many :users, through: :groups_users
