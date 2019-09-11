@@ -1,4 +1,4 @@
-# DB設計
+# DB設計案
 ## users table
 |column|Type|Options|
 |------|----|-------|
