@@ -1,7 +1,7 @@
 # README
 
-#　chat-space DB設計
-##　users table
+# chat-space DB設計
+## users table
 |column|Type|Options|
 |------|----|-------|
 |id|integer|null: false|
