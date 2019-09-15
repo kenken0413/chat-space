@@ -1,0 +1,31 @@
+.body
+  .sidebar
+    .sidebar__top
+      .sidebar__top__user
+        .sidebar__top__user--name
+          name
+        .sidebar__top__user--ul
+          =link_to "http://sample", class:"sidebar__top__user--li" do
+            =fa_icon 'edit'
+            %span<>
+          =link_to "http://sample", class:"sidebar__top__user--li" do
+            =fa_icon 'gear'    
+    .sidebar__main
+      = render 'chat-room'
+  .field
+    .field__top
+      .field__top__room
+        .field__top__room--title room-name
+        .field__top__room--member Menber: roommate...........
+      .field__top__edit Edit
+    .field__text
+      = render 'chat-space'
+  
+    .form
+      %form.form__new
+        .input-box
+          %input.input-box__text(placeholder = "type a message"){:name => "message[content]", :type => "text", :id => "message_content"}
+          %label.input-box__image(for = "message_image")
+            %i.fa.fa-image
+            %input.input-box__image__file{:name => "message[image]", :type => "file", :id => "message_image"}
+        %input.submit-btn(type = "submit" value="Send")
