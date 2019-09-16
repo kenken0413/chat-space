@@ -24,8 +24,8 @@
     .form
       %form.form__new
         .input-box
-          %input.input-box__text(placeholder = "type a message"){:name => "message[content]", :type => "text", :id => "message_content"}
+          %input.input-box__text(placeholder = "type a message"){name: "message[content]", type: "text", id: "message_content"}
           %label.input-box__image(for = "message_image")
             %i.fa.fa-image
-            %input.input-box__image__file{:name => "message[image]", :type => "file", :id => "message_image"}
+            %input.input-box__image__file{name: "message[image]", type: "file", id: "message_image"}
         %input.submit-btn(type = "submit" value="Send")
