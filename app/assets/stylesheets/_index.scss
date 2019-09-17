@@ -6,49 +6,51 @@ $white: #fff;
 $back-gray: #434a54;
 $writefont: #999;
 
-.sidebar{
+.side-bar{
   color: $white;
   float: left;
   width: 300px;
-  &__top{
+  &__wrapper{
     background-color: #253141;
     height: 100px;
     align-items: center;
     padding: 0 20px;
-    
-    &__user{
-      line-height: 100px;
-      display: flex;
-      justify-content: space-between;
-      font-weight: bold;
-      font-size: 16px;
-      &--name{
-        display: flex;
-        margin: 0;
-        padding: 0;
-      }
-      &--ul{
-        display: flex;
-        margin: 0;
-        padding: 0;
-        cursor: pointer;
-        list-style: none;
-      }
-      &--li{
-        display: list-item;
-        text-align: -webkit-match-parent;
-        margin-left:0.3rem;
-      }
-    }
   }
-  &__main{
-    background-color: #2f3e51;
-    color: $white;
-    height: calc(100vh - 100px);
-    overflow: scroll;
-    padding-left: 20px;
-    padding-right: 20px;
+}
+
+.header{
+  line-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+  &__name{
+    display: flex;
+    margin: 0;
+    padding: 0;
   }
+  &__lists{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    list-style: none;
+  }
+}
+
+.list{
+  display: list-item;
+  text-align: -webkit-match-parent;
+  margin-left:0.3rem;
+}
+
+.groups{
+  background-color: #2f3e51;
+  color: $white;
+  height: calc(100vh - 100px);
+  overflow: scroll;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .field{
@@ -95,14 +97,14 @@ $writefont: #999;
   }
 }
 
-.p1{
+.group__name{
   padding-top: 20px;
   padding-bottom: 5px;
   font-size: 15px;
   font-weight: bold;
 }
 
-.p2{
+.group__message{
   font-size: 11px;
   padding-bottom: 20px;
   font-weight: bold;
