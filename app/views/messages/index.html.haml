@@ -1,17 +1,5 @@
 .body
-  .sidebar
-    .sidebar__top
-      .sidebar__top__user
-        .sidebar__top__user--name
-          name
-        .sidebar__top__user--ul
-          =link_to "http://sample", class:"sidebar__top__user--li" do
-            =fa_icon 'edit'
-            %span<>
-          =link_to "http://sample", class:"sidebar__top__user--li" do
-            =fa_icon 'gear'    
-    .sidebar__main
-      = render 'chat-room'
+  = render 'shared/side_bar'
   .field
     .field__top
       .field__top__room
