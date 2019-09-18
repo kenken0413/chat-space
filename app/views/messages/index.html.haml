@@ -7,13 +7,12 @@
         .field__top__room--member Menber: roommate...........
       .field__top__edit Edit
     .field__text
-      = render 'chat-space'
-  
+      = render @messages
     .form
-      %form.form__new
+      = form_for [@group,@message] do |f|
         .input-box
-          %input.input-box__text(placeholder = "type a message"){name: "message[content]", type: "text", id: "message_content"}
+          = f.text_field :content, class: 'input-box__text',placeholder: 'type a message'
           %label.input-box__image(for = "message_image")
             %i.fa.fa-image
-            %input.input-box__image__file{name: "message[image]", type: "file", id: "message_image"}
+            %input.input-box__image__file{:name => "message[image]", :type => "file", :id => "message_image"}
         %input.submit-btn(type = "submit" value="Send")
