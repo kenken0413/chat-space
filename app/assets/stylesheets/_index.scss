@@ -30,12 +30,17 @@ $writefont: #999;
     padding: 0;
   }
   &__lists{
+    color :white;
     display: flex;
     margin: 0;
     padding: 0;
     cursor: pointer;
     list-style: none;
   }
+}
+
+a{
+  color: white;
 }
 
 .list{
