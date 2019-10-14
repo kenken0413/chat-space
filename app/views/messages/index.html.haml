@@ -3,8 +3,9 @@
   .field
     .field__top
       .field__top__room
-        .field__top__room--title room-name
-        .field__top__room--member Menber: roommate...........
+        .field__top__room--title
+          =@group.name
+        .field__top__room--member Menber: 
       .field__top__edit Edit
     .field__text
       = render @messages
