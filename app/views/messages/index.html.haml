@@ -5,8 +5,14 @@
       .field__top__room
         .field__top__room--title
           =@group.name
-        .field__top__room--member Menber: 
-      .field__top__edit Edit
+        .field__top__room--member Menber:
+        %ul
+          = @groups.each do |member|
+            %li
+              = member.name
+
+      = link_to 'Edit', edit_group_path(@group.id),class:"field__top__edit"
+   
     .field__text
       = render @messages
     .form
