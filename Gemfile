@@ -65,6 +65,9 @@ group :production do
 end
 
 group :development, :test do
+  gem 'pry-rails'
+  gem 'pry-byebug'
+  gem 'pry-doc'
   gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'
