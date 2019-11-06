@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-      if ( message.content.indexOf(message.image) ){
+      if ( message.image ){
         var html 
           = `<div class="message" data-id="${message.id}">
                <div class="upper-message">
@@ -67,10 +67,10 @@ $(function(){
 
   var reloadMessages = function(){
     if (window.location.href.match(/\/groups\/\d+\/messages/)){
-      var href = 'api/messages#index {:format=>"json"}'  
+      var url = 'api/messages#index {:format=>"json"}'  
       var last_message_id =  $(".message:last").data('id');
       $.ajax({
-        url: href,
+        url: url,
         type: 'GET',
         dataType: 'json',
         data: {id: last_message_id},
