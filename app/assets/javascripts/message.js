@@ -1,6 +1,6 @@
 $(function(){
   function buildHTML(message){
-      if ( message.image ){
+      if ( message.content.indexOf(message.image) ){
         var html 
           = `<div class="message" data-id="${message.id}">
                <div class="upper-message">
