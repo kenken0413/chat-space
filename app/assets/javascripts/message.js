@@ -13,14 +13,14 @@ $(function(){
                </div>
                <div class="lower-message">
                  <p class="lower-message__content">
-                   ${content}
+                   ${message.content}
                  </p>
                  <img src=${message.image} >
              </div>`
         return html;
       } else {
         var html =
-         `<div class="message" data-message-id=${message.id}>
+         `<div class="message" data-id=${message.id}>
             <div class="upper-message">
               <div class="upper-message__user-name">
                 ${message.user_name}
@@ -31,7 +31,7 @@ $(function(){
             </div>
             <div class="lower-message">
               <p class="lower-message__content">
-                ${content}
+                ${message.content}
               </p>
             </div>
           </div>`
